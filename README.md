@@ -12,3 +12,6 @@ It is completely configurable, and each user can choose a tool from any of their
 
 For more information, including a configuration and installation guide, project roadmap and screenshots, see:
 <https://wiki.jasig.org/display/PLT/Sakai+connector+portlet>
+
+###Edited contents
+In PortletDispatcher.java on line 468 changed to fetch new data if user is not the same as the user in the cached data.

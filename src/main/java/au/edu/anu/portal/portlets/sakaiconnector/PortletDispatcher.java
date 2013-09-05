@@ -465,7 +465,9 @@ public class PortletDispatcher extends GenericPortlet{
 		//check cache, otherwise form up all of the data
 		String cacheKey = getPortletNamespace(response);
 		params = retrieveFromCache(cacheKey);
-		if(params == null) {
+		
+		//SasaMakoric - get new param if user is different from cached data
+		if(params==null || !params.get("user_id").equals(getAuthenticatedUsername(request))) {
 		
 			//init for new data
 			params = new HashMap<String,String>();
